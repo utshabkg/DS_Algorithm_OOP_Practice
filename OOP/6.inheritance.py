@@ -1,51 +1,53 @@
 class A:
 
-    def featureA(self):
+    def feature_a(self):
         print("A")
 
 
 class B(A):  # Single Level Inheritance
 
-    def featureB(self):
+    def feature_b(self):
         print("B")
 
 
 class C(B):  # Multi Level
 
-    def featureC(self):
+    def feature_c(self):
         print("C")
+
 
 class X:
 
-    def featureX(self):
+    def feature_x(self):
         print("X")
+
 
 class D(C, X):  # Multiple
 
-    def featureD(self):
+    def feature_d(self):
         print("D")
 
 
 print("Features of A:")
 a = A()
-a.featureA()
+a.feature_a()
 
 
 print("Features of B:")
 b = B()
-b.featureA()
-b.featureB()
+b.feature_a()
+b.feature_b()
 
 print("Features of C:")
 c = C()
-c.featureA()
-c.featureB()
-c.featureC()
+c.feature_a()
+c.feature_b()
+c.feature_c()
 
 print("Features of D:")
 d = D()
-d.featureA()
-d.featureB()
-d.featureC()
-d.featureX()
-d.featureD()
+d.feature_a()
+d.feature_b()
+d.feature_c()
+d.feature_x()
+d.feature_d()
