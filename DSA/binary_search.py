@@ -11,8 +11,9 @@ def binary_search(list: list, number_to_find: int):
         elif list[mid_index] < number_to_find:
             left_index = mid_index + 1
 
-        elif list[mid_index] == number_to_find:
+        elif list[mid_index] > number_to_find:
             right_index = mid_index - 1
+
 
 def binary_search_recursion(list: list, number_to_find: int, left_index: int, right_index: int):
     if right_index < left_index:
@@ -34,11 +35,12 @@ def binary_search_recursion(list: list, number_to_find: int, left_index: int, ri
 
     binary_search_recursion(list, number_to_find, left_index, right_index)
 
+
 if __name__ == '__main__':
     l = [12, 15, 18, 21, 24]
 
     number, index = binary_search(l, 18)
-    print("With Loop:", number, "is in the index",index)
+    print("With Loop:", number, "is in the index", index)
 
-    number, index = binary_search_recursion(l, 180, 0, len(l)-1)
+    number, index = binary_search_recursion(l, 180, 0, len(l) - 1)
     print("With Recursion:", number, "is in the index", index)
